@@ -12,7 +12,7 @@ class PostController extends Controller
         $posts = Post::all();
 
         foreach ($posts as $post) {
-            $post->comments = \Http::get("http://20.23.38.81/api/posts/{$post->id}/comments")->json();
+            $post->comments = \Http::get("http://20.56.245.147/api/posts/{$post->id}/comments")->json();
         }
 
         return $posts;

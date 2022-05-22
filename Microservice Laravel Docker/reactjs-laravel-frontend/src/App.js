@@ -7,7 +7,7 @@ function App() {
 
     useEffect(() => {
         (async () => {
-            const response = await fetch('http://20.31.56.185/api/posts');
+            const response = await fetch('http://20.54.213.92/api/posts');
 
             const content = await response.json()
 
@@ -18,7 +18,7 @@ function App() {
     const createPost = async e => {
         e.preventDefault();
 
-        const res = await fetch('http://20.31.56.185/api/posts', {
+        const res = await fetch('http://20.54.213.92/api/posts', {
             method: "POST",
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
@@ -35,7 +35,7 @@ function App() {
     const createComment = async (e, post_id) => {
         e.preventDefault();
 
-        const response = await fetch('http://20.23.38.81/api/comments', {
+        const response = await fetch('http://20.56.245.147/api/comments', {
             method: "POST",
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
